@@ -9,16 +9,19 @@ def peso_ideal(sexo,altura):
         return (72.7*altura) - 58
     else:
         return f'de acordo com essas opção : 1 para feminino ou 2 para masculino\nVocê digitou {sexo} opcão invalida'
+    
+while True:
 
-try:
+    try:
 
-    sexo = int(input('Digite um número 1 para feminino ou 2 para masculino : '))
+        sexo = int(input('Digite um número 1 para feminino ou 2 para masculino : '))
 
-    altura = float(input('Digite sua altura : '))
+        altura = float(input('Digite sua altura : '))
 
-    resul_peso_ideal = peso_ideal(sexo,altura)
+        resul_peso_ideal = peso_ideal(sexo,altura)
 
-    print(f'Resultado do seu peso ideal é {resul_peso_ideal}')
-except ValueError:
-    print('valor invalido')
+        print(f'Resultado do seu peso ideal é {resul_peso_ideal}')
+        break
+    except ValueError:
+        print('valor invalido')
 
