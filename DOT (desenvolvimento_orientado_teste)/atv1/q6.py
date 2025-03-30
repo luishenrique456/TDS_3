@@ -11,9 +11,9 @@ def calcular_poligono(lado,medida_lado):
     area = lado **2
 
     if lado == 3:
-        return f'TRIÂNGULO e o valor do seu perímetro é {perimetro}'
+        return f'TRIÂNGULO e o valor do seu perímetro é {perimetro}cm'
     elif lado == 4:
-        return f'QUADRADO e o valor da sua área é {area}'
+        return f'QUADRADO e o valor da sua área é {area}\u00b2'
     elif lado == 5:
         return 'É um PENTÁGONO'
     else:

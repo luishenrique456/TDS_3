@@ -10,6 +10,7 @@ while True:
         num = int(input('Digite um número : '))
         resul = verficar_par_impar(num)
         print(resul)
+        break
     except ValueError:
         print('Invalidor')
-        break
+        
