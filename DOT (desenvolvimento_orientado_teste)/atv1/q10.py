@@ -5,8 +5,14 @@
 #b) O programa principal lê 4 séries de 4 números a, b , c , d. Para cada série lida imprime o maior dos quatro números usando a função
 #Max.
 def maior(a,b,c,d):
-    maior = max(a,b,c,d)
-    return maior
+    maior = a
+    if b > maior:
+        maior = b
+    if c > maior:
+        maior = c
+    if d > maior:
+        maior = d
+    return f'Maior é {maior}'
 
 
 while True:
