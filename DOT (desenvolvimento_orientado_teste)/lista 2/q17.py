@@ -2,3 +2,24 @@
 # valor V ocorre na lista W e escrever também em que posições (índices) da lista W o valor V
 # aparece.
 # Caso o valor V não ocorra nenhuma vez na lista W, escrever uma mensagem informando isto.
+
+
+
+
+
+
+def main():
+    while True:
+        try:
+            pass
+
+
+        except ValueError:
+            print('Valor invalidor')
+
+
+
+
+
+if __name__ == '__main__':
+    main()

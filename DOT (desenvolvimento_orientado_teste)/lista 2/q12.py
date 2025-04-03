@@ -4,3 +4,23 @@
 # o cartão gabarito;
 # o número de alunos da turma;
 # o cartão de respostas para cada aluno, contendo o seu número e suas respostas.
+
+
+
+
+
+def main():
+    while True:
+        try:
+            pass
+
+
+        except ValueError:
+            print('Valor invalidor')
+
+
+
+
+
+if __name__ == '__main__':
+    main()

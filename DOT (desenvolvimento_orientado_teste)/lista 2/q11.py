@@ -9,3 +9,23 @@
 # 0) Sair do programa
 # ——————–
 # Digite sua escolha:_
+
+
+
+
+
+def main():
+    while True:
+        try:
+            pass
+
+
+        except ValueError:
+            print('Valor invalidor')
+
+
+
+
+
+if __name__ == '__main__':
+    main()
