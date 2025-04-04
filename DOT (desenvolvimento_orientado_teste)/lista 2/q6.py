@@ -13,7 +13,8 @@
 def main():
     while True:
         try:
-            pass
+            lista_qtd = [5,3,4,2,5]
+            lista_preco = [10,20,12,4,10]
 
 
         except ValueError:
