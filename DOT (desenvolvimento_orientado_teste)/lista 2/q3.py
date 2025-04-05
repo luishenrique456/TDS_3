@@ -14,7 +14,7 @@ def main():
         try:
 
             lista_numeros = []
-            for i in range(10+1):
+            for i in range(10):
                 num = int(input(f"Digite {i+1} um número : "))
                 lista_numeros.append(num)
     

@@ -12,7 +12,7 @@ def main():
         try:
             pass
 
-
+            break
         except ValueError:
             print('Valor invalidor')
 

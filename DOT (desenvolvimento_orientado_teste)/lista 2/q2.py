@@ -11,8 +11,8 @@ def conta_negativo(numeros : list[int])-> int:
 
 def somar_lista(numeros):
     cont = 0
-    for i in range(len(numeros)):
-        if numeros[i] > 0:
+    for i in numeros:
+        if i > 0:
             cont += i
     return f'Somar da lista é  {cont}'
 
@@ -23,7 +23,7 @@ def main():
         try:
 
             lista_num_reais = []
-            for i in range(10+1):
+            for i in range(5):
                 num = int(input(f'Digite {i+1} seu número : '))
                 lista_num_reais.append(num)
 
