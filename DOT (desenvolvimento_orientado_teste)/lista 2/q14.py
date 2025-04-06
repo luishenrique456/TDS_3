@@ -3,12 +3,16 @@
 def ler_lista(num):
     lista_num = []
     for i in range(num):
-        numero = int(input('Digite um número : '))
-        lista_num.append(num)
+        numero = int(input(f'Digite {i+1}º um número : '))
+        lista_num.append(numero)
     return lista_num
 
-def mundar_valor_neg():
-    pass
+def mundar_valor_neg(numeros : list[int])-> list[int]:
+    
+    for i in range(len(numeros)):
+        if numeros[i] < 0:
+            numeros[i]= 0
+    return numeros
 
 
 
@@ -16,6 +20,8 @@ def main():
     while True:
         try:
             listas_numeros = ler_lista(10)
+            resul = mundar_valor_neg(listas_numeros)
+            print(resul)
 
             break
         except ValueError:
