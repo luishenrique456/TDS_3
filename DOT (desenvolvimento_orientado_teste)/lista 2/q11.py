@@ -10,28 +10,77 @@
 # ——————–
 # Digite sua escolha:_
 
+# def tamanho_lista():
+#     num = int(input('Digite número de posições definidas para sua lista : '))
+#     lista_nomes = []
+#     for i in range(num):
+#         nomes = input(f'Digite {i+1}º um nome na sua lista : ').title()
+#         lista_nomes.append(nomes)
+#     return lista_nomes
+
+def cadastar_nome():
+    add_nome = input('Digite um nome : ').title()
+    lista_nomes.append(add_nome)
+    print(f'Nome {add_nome} adicionado com sucesso')
+    return lista_nomes
+
+def pesquisar_nome(lista_nome):
+    nome = input('Digite nome pesquisa : ').title()
+    if nome in lista_nome:
+        return f'{nome} estar na lista'
+    else:
+        return f'{nome} Não estar na lista'
+    
+def mostra_lista(lista_nomes):
+    return lista_nomes
+
+
+
+    
+    
 
 
 
 
 
+lista_nomes = [] #variavel global
+while True:
+    try:
+        
+        print('''
+        ==== =MENU========
+     1)Cadastar nome
+     2)Pesquisar nome
+     3)Listar todos os nome
+     0) Sair do programa
+     ——————–--------------
 
+        ''')
+        opcao = int(input('Digite sua escolha um número (1,2,3 ou 0) : '))
 
-
-
-def main():
-    while True:
-        try:
-            
-
+        if opcao == 0:
+            print('Programa encerrado')
             break
+        elif opcao == 1:
+            lista_nomes = cadastar_nome()
+            
+        elif opcao == 2:
+            print(pesquisar_nome(lista_nomes))
+        elif opcao == 3:
+            lista_nomes = mostra_lista(lista_nomes)
+            print(lista_nomes)
+        else:
+            print('Opção invalidor por favor Digite Novamente (1,2,3 ou 0) : ')
+            
+        
+    
+    
 
-        except ValueError:
-            print('Valor invalidor')
+
+    except ValueError:
+        print('valor invalidor! Digite Novamente')
 
 
 
 
 
-if __name__ == '__main__':
-    main()

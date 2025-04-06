@@ -4,7 +4,7 @@
 def ler_lista(numero : int)-> list[int]:
     lista_num = []
     for i in range(numero):
-        num = int(input(f'Digite {i+1} um número : '))
+        num = int(input(f'Digite {i+1}º um número : '))
         lista_num.append(num)
 
     return lista_num

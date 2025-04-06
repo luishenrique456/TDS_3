@@ -24,7 +24,7 @@ def main():
 
             lista_num_reais = []
             for i in range(5):
-                num = int(input(f'Digite {i+1} seu número : '))
+                num = int(input(f'Digite {i+1}º seu número : '))
                 lista_num_reais.append(num)
 
             print(conta_negativo(lista_num_reais))

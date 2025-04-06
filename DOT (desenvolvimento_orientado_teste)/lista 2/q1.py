@@ -33,7 +33,7 @@ def main():
 
             lista_num = []
             for i in range(100):
-                num = int(input(f'Digite um {i+1} número : '))
+                num = int(input(f'Digite um {i+1}º número : '))
                 lista_num.append(num)
 
             resul_par = lista_par(lista_num)

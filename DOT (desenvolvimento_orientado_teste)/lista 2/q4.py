@@ -19,7 +19,7 @@ def main():
         try:
             lista_numeros = []
             for i in range(15):
-                num = int(input(f'Digite {i+1} um número : '))
+                num = int(input(f'Digite {i+1}º um número : '))
                 lista_numeros.append(num)
             
             print(f'Sua lista de número {lista_numeros}')

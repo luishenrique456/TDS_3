@@ -15,7 +15,7 @@ def main():
 
             lista_numeros = []
             for i in range(10):
-                num = int(input(f"Digite {i+1} um número : "))
+                num = int(input(f"Digite {i+1}º um número : "))
                 lista_numeros.append(num)
     
             print(reverte_num(lista_numeros))
