@@ -9,6 +9,8 @@ def ler_lista(n):
 
     return lista_numeros
 
+def juntar(lista1,lista2):
+    return lista1 + lista2
 
 
 
@@ -16,7 +18,9 @@ def main():
     while True:
         try:
             lista_r = ler_lista(5)
-            lista_s = ler_lista(5)
+            lista_s = ler_lista(10)
+            lista_x = juntar(lista_r,lista_s)
+            print(lista_x)
 
             break
         except ValueError:

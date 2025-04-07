@@ -2,7 +2,7 @@
 # ocorreu a letra ‘A’.
 # OBS: Fazer crítica na entrada do caractere para aceitar somente letras.
 
-#Esse código precisar ser reajustado
+
 def verficar_letra_A():
     cont = 0
     lista_letras = ['B','C','A','A','D']
@@ -24,10 +24,13 @@ def main():
                 resul = verficar_letra_A()
                 print(f'Letra A repetiu : {resul}')
                 break
+            else:
+                print('valor invalidor. Digite novamente')
+                
 
 
         except ValueError:
-            print('Valor invalidor!Digite novamnete')
+            print('Valor invalidor!')
 
 
 
