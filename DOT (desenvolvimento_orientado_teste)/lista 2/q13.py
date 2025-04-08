@@ -32,10 +32,10 @@ def main():
         try:
             lista_dados = dado_user()
             print(lista_dados)
-            face1 = int(input('Digite número da face 1 º : '))
+            face1 = int(input('Digite número de uma face do dado : '))
             if 1<= face1 <= 6:
                 resul = ocorrencia(lista_dados,face1)
-                print(f'Face 1º {resul} vezes')
+                print(f'Face repetiu {resul} vezes')
                 break
             else:
                 print('Só pode números 1 a 6. Digite Novamente')

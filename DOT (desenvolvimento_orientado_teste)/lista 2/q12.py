@@ -4,6 +4,19 @@
 # o cartão gabarito;
 # o número de alunos da turma;
 # o cartão de respostas para cada aluno, contendo o seu número e suas respostas.
+import random
+
+def gera_resposta(num_questao):
+    lista_questao = []
+    alternativa = ['A','B','C','D']
+    for i in range(num_questao):
+        lista_questao.append(random.choice(alternativa))
+    return lista_questao
+
+
+
+
+
 
 
 
@@ -12,7 +25,7 @@
 def main():
     while True:
         try:
-            pass
+            print(gera_resposta(5))
 
             break
         except ValueError:

@@ -9,8 +9,22 @@ def ler_lista(n):
         lista_num.append(num)
 
     return lista_num
+
 def modificar_lista(lista_x):
-    pass
+    lista_par = []
+    for i in lista_x:
+        if i % 2 == 0:
+            lista_par.append(i//2)
+
+    return lista_par
+
+def modificar_lista2(lista_x):
+    lista_impar = []
+    for i in lista_x:
+        if i % 2 != 0:
+            lista_impar.append(i*3)
+
+    return lista_impar
 
 
 
@@ -19,7 +33,8 @@ def main():
     while True:
         try:
             lista_x = ler_lista(5)
-            print(modificar_lista(lista_x))
+            print(f'Lista Y {modificar_lista(lista_x)}')
+            print(f'Lista X {modificar_lista2(lista_x)}')
 
 
             break
