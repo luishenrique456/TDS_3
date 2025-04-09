@@ -13,7 +13,18 @@ def gera_resposta(num_questao):
         lista_questao.append(random.choice(alternativa))
     return lista_questao
 
+def resposta_aluno():
+    gabarito = gera_resposta(30)
+    resp_aluno = gera_resposta(30)
+    acertos = 0
+    for i in range(len(gabarito)):
+        if resp_aluno[i] == gabarito[i]:
+            acertos += 1
+            
+    return gabarito , resp_aluno , acertos
+        
 
+    
 
 
 
@@ -25,7 +36,15 @@ def gera_resposta(num_questao):
 def main():
     while True:
         try:
-            print(gera_resposta(5))
+            
+            gabarito , respo_aluno , acerto = resposta_aluno()
+            print(f'Gabarito {gabarito}')
+            print(f'Resposta do Aluno {respo_aluno}')
+            print(f'Acertos do Aluno {acerto}')
+
+            
+
+            
 
             break
         except ValueError:
