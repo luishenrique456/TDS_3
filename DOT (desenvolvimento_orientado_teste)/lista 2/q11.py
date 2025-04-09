@@ -10,13 +10,6 @@
 # ——————–
 # Digite sua escolha:_
 
-# def tamanho_lista():
-#     num = int(input('Digite número de posições definidas para sua lista : '))
-#     lista_nomes = []
-#     for i in range(num):
-#         nomes = input(f'Digite {i+1}º um nome na sua lista : ').title()
-#         lista_nomes.append(nomes)
-#     return lista_nomes
 
 def cadastar_nome():
     add_nome = input('Digite um nome : ').title()

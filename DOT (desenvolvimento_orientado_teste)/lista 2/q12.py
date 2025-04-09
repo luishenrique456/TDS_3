@@ -22,9 +22,9 @@ def resposta_aluno():
             acertos += 1
             
     return gabarito , resp_aluno , acertos
-        
 
-    
+
+        
 
 
 
