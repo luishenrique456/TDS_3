@@ -4,17 +4,20 @@
 def converter_celsius(temperatura_fah):
     celsius = ((temperatura_fah-32)/9) * 5
     return celsius
+def main():
 
-while True:
+    while True:
 
-    try:
+        try:
     
-        temp_fah = int(input('Digite temperatura em Fahrenheit : '))
+            temp_fah = int(input('Digite temperatura em Fahrenheit : '))
 
-        temp_convertido = converter_celsius(temp_fah)
+            temp_convertido = converter_celsius(temp_fah)
 
-        print(f'Sua temperatura convertida para Celsius é {temp_convertido:.2f}')
-        break
+            print(f'Sua temperatura convertida para Celsius é {temp_convertido:.2f}')
+            break
 
-    except ValueError:
-        print('Valor invalido')
+        except ValueError:
+            print('Valor invalido')
+if __name__ == '__main__':
+    main()

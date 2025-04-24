@@ -9,15 +9,19 @@ def perimetro_circulo(r):
     perimetro = 3.14 * 2 * r
     return perimetro
 
-while True:
+def main():
 
-    try:
+    while True:
 
-        r = float(input('Digite raio do círculo :'))
-        r = float(input('Digite perímetro do círculo :'))
-        print(f'Raio do círculo é {area_circulo(r)}')
-        print(f'Raio do círculo é {perimetro_circulo(r)}')
-        break
+        try:
 
-    except ValueError:
-        print('Invalidor')
+            r = float(input('Digite raio do círculo :'))
+            r = float(input('Digite perímetro do círculo :'))
+            print(f'Raio do círculo é {area_circulo(r)}')
+            print(f'Raio do círculo é {perimetro_circulo(r)}')
+            break
+
+        except ValueError:
+            print('Invalidor')
+if __name__ == "__main__":
+    main()
