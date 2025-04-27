@@ -3,6 +3,9 @@
 
 #função mostra lista de divisores
 def divisore(num:int)-> list[int]:
+    if type(num) != int or num <= 0:
+        return Exception
+
     lista_div = []
     for i in range(1,num+1):
         if num % i == 0:
@@ -12,6 +15,9 @@ def divisore(num:int)-> list[int]:
 
 #função mostra quantidade do divisores
 def qtd_divisores(num : int)-> int:
+    if type(num) != int or num <= 0:
+        return Exception
+
     cont = 0
     for i in range(1,num+1):
         if num % i == 0:
@@ -19,17 +25,20 @@ def qtd_divisores(num : int)-> int:
 
     return cont
 
+def main():
 
-while True:
-    try:
-        num = int(input('Digite um número : '))
-        if num > 0:
-            resul = divisore(num)
-            total_div = qtd_divisores(num)
-            print(f'Seu número : {num}\nseu divisores : {resul}\nTotal de divisores : {total_div}')
-            break
-        else:
-            print('valor tem que ser positivo.Digite novamente : ')
+    while True:
+        try:
+            num = int(input('Digite um número : '))
+            if num > 0:
+                resul = divisore(num)
+                total_div = qtd_divisores(num)
+                print(f'Seu número : {num}\nseu divisores : {resul}\nTotal de divisores : {total_div}')
+                break
+            else:
+                print('valor tem que ser positivo.Digite novamente : ')
 
-    except ValueError:
-        print('valor invalidor')
+        except ValueError:
+            print('valor invalidor')
+if __name__ == '__main__':
+    main()

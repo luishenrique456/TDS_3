@@ -6,6 +6,9 @@
 #Utilize uma função que recebe como parâmetro de entrada o número a ser calculado o fatorial,
 #do tipo inteiro, e retorna o fatorial deste número , também do tipo inteiro.
 def fatorial(num):
+    if type(num) != int or num < 0:
+        return Exception
+
     if num == 0:
         return 1
     if num == 1:
@@ -15,13 +18,16 @@ def fatorial(num):
         cont *= qtd
     return cont
 
+def main():
 
-while True:
-    try:
-        num = int(input('Digite um número : '))
-        resul = fatorial(num)
-        print(f'Seu número {num}! seu fatorial é {resul}')
-        break
+    while True:
+        try:
+            num = int(input('Digite um número : '))
+            resul = fatorial(num)
+            print(f'Seu número {num}! seu fatorial é {resul}')
+            break
 
-    except ValueError:
-        print('valor invalidor')
+        except ValueError:
+            print('valor invalidor')
+if __name__ == '__main__':
+    main()

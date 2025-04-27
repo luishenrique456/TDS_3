@@ -5,6 +5,9 @@
 #b) O programa principal lê 4 séries de 4 números a, b , c , d. Para cada série lida imprime o maior dos quatro números usando a função
 #Max.
 def maior(a,b,c,d):
+    if type(a) != int or type(b) != int or type(c) != int or type(d) != int:
+        return Exception
+
     maior = a
     if b > maior:
         maior = b
@@ -14,18 +17,21 @@ def maior(a,b,c,d):
         maior = d
     return f'Maior é {maior}'
 
+def main():
 
-while True:
-    try:
-        n1 = int(input('Digite um número : '))
-        n2 = int(input('Digite um número : '))
-        n3 = int(input('Digite um número : '))
-        n4 = int(input('Digite um número : '))
+    while True:
+        try:
+            n1 = int(input('Digite um número : '))
+            n2 = int(input('Digite um número : '))
+            n3 = int(input('Digite um número : '))
+            n4 = int(input('Digite um número : '))
 
-        resultado = maior(n1,n2,n3,n4)
+            resultado = maior(n1,n2,n3,n4)
 
-        print(f'Maior é {resultado}')
-        break
+            print(f'{resultado}')
+            break
     
-    except ValueError:
-        print('valor invalidor')
+        except ValueError:
+            print('valor invalidor')
+if __name__ == '__main__':
+    main()

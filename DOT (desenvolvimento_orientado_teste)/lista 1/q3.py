@@ -2,8 +2,10 @@
 #Faça uma função chamada celsius para calcular e retornar o valor em graus Celsius.
 
 def converter_celsius(temperatura_fah):
+    if type(temperatura_fah) != int:
+        return Exception
     celsius = ((temperatura_fah-32)/9) * 5
-    return celsius
+    return round(celsius,2)
 def main():
 
     while True:

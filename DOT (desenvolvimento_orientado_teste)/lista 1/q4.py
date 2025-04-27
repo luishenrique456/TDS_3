@@ -3,26 +3,37 @@
 # a média semestral e a mensagem " PARABÉNS! você foi aprovado! "
 #somente se o aluno foi aprovado (considere 6.0 a média mínima para aprovação)
 
-def media_Semestral(nota1,nota2):
-    media = nota1+nota2/ 2
-    if 6.0 < media:
-        return f'PARABÉNS! você foi aprovado!'
+def media_semestral(nota1,nota2):
+    if not isinstance(nota1,(float,int)) or not isinstance(nota2,(float,int)):
+        return 'Nota inválida'
+    
+    if 0.0 <= nota1 <= 10.0 and 0.0 <= nota2 <= 10.0:
+        media = nota1+nota2/ 2
+        if media >= 6.0:
+            return f'PARABÉNS! você foi aprovado!'
+        else:
+            return f'): você foi reprovado '
     else:
-        return f'): você foi reprovado '
-while True:
+        return f'Nota fora do limite'
+    
+def main():
 
-    try:
-        nota1 = float(input('Digite sua nota 1 : '))
+    while True:
 
-        nota2 = float(input('Digite sua nota 2 : '))
+        try:
+            nota1 = float(input('Digite sua nota 1 : '))
 
-        resultado = media_Semestral(nota1,nota2)
+            nota2 = float(input('Digite sua nota 2 : '))
 
-        print(f'{resultado}')
-        break
+            resultado = media_semestral(nota1,nota2)
 
-    except ValueError:
-        print('valor invalidor')
+            print(f'{resultado}')
+            break
+
+        except ValueError:
+            print('valor invalidor')
+if __name__ == '__main__':
+    main()
 
 
 
