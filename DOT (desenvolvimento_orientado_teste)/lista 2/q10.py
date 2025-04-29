@@ -1,11 +1,13 @@
 # 10) Faça um programa que grave uma lista com 15 posições, calcule e mostre:
 # a) O maior elemento da lista e em que posição esse elemento se encontra;
 # b) O menor elemento da lista e em que posição esse elemento se encontra.
+from random import randint
+
 def ler_lista(n):
     lista_numeros = []
     for i in range(n):
-        num = int(input(f'Digite um {i+1}º número : '))
-        lista_numeros.append(num)
+        # num = int(input(f'Digite um {i+1}º número : '))
+        lista_numeros.append(randint(1,5))
     return lista_numeros
 
 def maior_posicao(numeros):

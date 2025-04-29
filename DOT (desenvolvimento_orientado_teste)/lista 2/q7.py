@@ -2,14 +2,10 @@
 # outro valor dado pertence ou não à lista.
 def verficar_valor(num):
     lista_numeros = [1,20,3,4,5,30,60,44,33,9]
-    for i in lista_numeros:
-        if i == num:
-            return f'Seu número estar na lista {num}'
-        else:
-            return f'Seu número não estar na lista {num}'
-
-
-
+    if num in lista_numeros:
+        return f'Seu número estar na lista {num}'
+    else:
+        return f'Seu número não estar na lista {num}'
 
 
 def main():

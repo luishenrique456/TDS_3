@@ -1,5 +1,6 @@
 # 2) Faça um programa que grave uma lista com dez números reais, calcule e mostre a quantidade
 # de números negativos e a soma dos números positivos dessa lista.
+from random import randint
 
 def conta_negativo(numeros : list[int])-> int:
     cont_neg = 0
@@ -24,8 +25,8 @@ def main():
 
             lista_num_reais = []
             for i in range(5):
-                num = int(input(f'Digite {i+1}º seu número : '))
-                lista_num_reais.append(num)
+                #num = int(input(f'Digite {i+1}º seu número : '))
+                lista_num_reais.append(randint(1,5))
 
             print(conta_negativo(lista_num_reais))
             print(somar_lista(lista_num_reais))

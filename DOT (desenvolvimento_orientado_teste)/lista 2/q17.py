@@ -2,11 +2,13 @@
 # valor V ocorre na lista W e escrever também em que posições (índices) da lista W o valor V
 # aparece.
 # Caso o valor V não ocorra nenhuma vez na lista W, escrever uma mensagem informando isto.
+from random import randint
+
 def ler_lista(n):
     lista_numero = []
     for i in range(n):
-        num = int(input(f'Digite {i+1}º um número : '))
-        lista_numero.append(num)
+        # num = int(input(f'Digite {i+1}º um número : '))
+        lista_numero.append(randint(1,5))
     return lista_numero
 
 def contador_ocorrecia(lista_w : list[int],num : int):
@@ -30,6 +32,7 @@ def main():
             valor = int(input('Digite um número da lista : '))
             if valor in lista_w:
                 resul = contador_ocorrecia(lista_w,valor)
+                print(f'Lista {lista_w}')
                 print(resul)
                 break
             else:

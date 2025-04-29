@@ -1,10 +1,13 @@
 # 18) Ler uma lista X de 10 elementos. A seguir copiar todos os valores negativos da lista X para
 # uma lista R, sem deixar elementos vazios entre os valores copiados. Escrever as listas X e R.
+
+from random import randint
+
 def ler_lista(n):
     lista_numero = []
     for i in range(n):
-        num = int(input(f'Digite {i+1} º um número : '))
-        lista_numero.append(num)
+        # num = int(input(f'Digite {i+1} º um número : '))
+        lista_numero.append(randint(-10,10))
     return lista_numero
 
 def lista_negativo(numeros : list[int]):

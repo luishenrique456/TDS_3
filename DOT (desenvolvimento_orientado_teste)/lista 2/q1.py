@@ -3,6 +3,7 @@
 # b) Grave uma lista somente com os números pares e mostre a lista;
 # c) Mostre a quantidade de números ímpares;
 # d) Grave uma lista somente com os números ímpares e mostre a lista.
+from random import randint
 def lista_par(list_num : list[int])-> list[int]:
     num_par = []
     num_impar = []
@@ -33,8 +34,7 @@ def main():
 
             lista_num = []
             for i in range(100):
-                num = int(input(f'Digite um {i+1}º número : '))
-                lista_num.append(num)
+                lista_num.append(randint(1,5))
 
             resul_par = lista_par(lista_num)
     

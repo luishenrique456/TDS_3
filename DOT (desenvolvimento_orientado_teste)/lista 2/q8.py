@@ -17,7 +17,7 @@ def verficar_letra_A():
 def main():
     while True:
         try:
-            caractere = input('Digite letra "A" :  ').strip().upper()
+            caractere = input('Digite letra "A" :  ').strip().upper()[0]
             if 'B' <= caractere <= 'Z':
                 print('Letra invalidor . Digite letra A : ')
             elif caractere == 'A':

@@ -1,11 +1,12 @@
 # 5) Faça um programa que leia duas listas de 10 elementos numéricos cada um e intercale os
 # elementos deste em uma outra lista de 20 elementos.
+from random import randint
 
 def ler_lista(numero : int)-> list[int]:
     lista_num = []
     for i in range(numero):
-        num = int(input(f'Digite {i+1}º um número : '))
-        lista_num.append(num)
+        # num = int(input(f'Digite {i+1}º um número : '))
+        lista_num.append(randint(1,5))
 
     return lista_num
 
