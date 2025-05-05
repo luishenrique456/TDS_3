@@ -6,6 +6,7 @@
 
 def lista_par(list_num : list[int])-> list[int]:
     #verficar função pode recebe do tipo list ou list[int] elemento tem que ser int
+    # Se a lista tiver qualquer item que não seja do tipo int, a função retorna Exception
     if type(list_num) != list or not all(isinstance(i,int)for i in list_num):
         return Exception
 
