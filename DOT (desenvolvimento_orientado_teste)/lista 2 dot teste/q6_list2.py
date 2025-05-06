@@ -6,7 +6,11 @@
 def faturamento(lista_qtd : list[int],lista_preco: list[int,float])-> list[int]:
     if type(lista_qtd) != list or type(lista_preco) != list:
         return Exception
-    elif not all(isinstance(i,int)for i in lista_qtd):
+    elif not all(isinstance(i,int) and i >= 0 for i in lista_qtd):
+        return Exception
+    elif not all(isinstance(i,(int,float)) and i >= 0 for i in lista_preco):
+        return Exception
+    elif len(lista_qtd) == 0 or len(lista_preco) == 0:
         return Exception
 
     lista_faturamento = []
@@ -18,6 +22,12 @@ def faturamento(lista_qtd : list[int],lista_preco: list[int,float])-> list[int]:
 def faturamento_total(lista_qtd,lista_preco):
     if type(lista_qtd) != list or type(lista_preco) != list:
         return Exception
+    elif not all(isinstance(i,int) and i >= 0 for i in lista_qtd):
+        return Exception
+    elif not all(isinstance(i,(int,float))and i >= 0 for i in lista_preco):
+        return Exception
+    elif len(lista_qtd) == 0 or len(lista_preco) == 0:
+        return Exception
 
 
     cont = 0
@@ -28,6 +38,12 @@ def faturamento_total(lista_qtd,lista_preco):
     
 def media_faturamento(lista_qtd,lista_preco):
     if type(lista_qtd) != list or type(lista_preco) != list:
+        return Exception
+    elif not all(isinstance(i,int) and i >= 0 for i in lista_qtd):
+        return Exception
+    elif not all(isinstance(i,(int,float)) and i >= 0 for i in lista_preco):
+        return Exception
+    elif len(lista_qtd) == 0 or len(lista_preco) == 0:
         return Exception
 
     #calcular media
@@ -64,10 +80,44 @@ assert media_faturamento('w',[5]) == Exception
 
 assert media_faturamento([6],'g') == Exception
 
-#verficar elemento da list é int
+#verficar elemento da list é lista_qtd[int] e lista_preco[int ou float]
 
 assert faturamento(['a'],[2]) == Exception
 
-# assert faturamento([2],['j']) == Exception
+assert faturamento([1.5],[2]) == Exception
+
+assert faturamento([],[2]) == Exception
+
+assert faturamento([3],[]) == Exception
+
+assert faturamento([-1],[4]) == Exception 
+
+assert faturamento([2],[-4.0]) == Exception
+
+assert faturamento_total([-1],[4]) == Exception
+
+assert faturamento_total([2],[-4]) == Exception
+
+assert faturamento_total([],[]) == Exception
+
+assert faturamento_total([4],[]) == Exception
+
+assert faturamento_total([],[5]) == Exception
+
+assert media_faturamento([-4],[3]) == Exception
+
+assert media_faturamento([5],[-6]) == Exception
+
+assert media_faturamento([],[]) == Exception
+
+assert media_faturamento([2],[]) == Exception
+
+assert media_faturamento([],[3]) == Exception
+
+assert faturamento([2],['j']) == Exception
+
+assert faturamento_total(['a'],[1]) == Exception
+
+assert faturamento_total([2],['f']) == Exception
 
 print('teste tudo ok! da questão 6 da lista 2')
