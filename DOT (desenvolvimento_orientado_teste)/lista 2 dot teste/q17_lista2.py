@@ -23,12 +23,18 @@ assert contador_ocorrecia([2, 2, 4, 4, 5],4) == 'Seu número 4\nQuantas repetiu 
 
 #verficar parâmetro é tipo list
 
+assert contador_ocorrecia(3.6,3.0) == Exception
+
 assert contador_ocorrecia([],3) == Exception
 
 assert contador_ocorrecia('a',4) == Exception
 
+assert contador_ocorrecia([5],'d') == Exception
+
 #verficar elemento da list é int
 
 assert contador_ocorrecia(['a'],'d') == Exception
+
+assert contador_ocorrecia([1.6],5)
 
 print('Teste tudo Ok! da questão 17 da lista 2')
