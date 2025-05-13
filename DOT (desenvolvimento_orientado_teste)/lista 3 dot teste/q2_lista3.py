@@ -23,14 +23,14 @@ def tira_numero_rep(lista_num):
 
     return lista_new
 
-def qtd_cada_itens_list(lista_numeros,numeros):
-    if type(lista_numeros) != list or not all(isinstance(i,int)for i in lista_numeros) or len(lista_numeros) == 0:
+def qtd_cada_itens_list(lista_original,numeros):
+    if type(lista_original) != list or not all(isinstance(i,int)for i in lista_original) or len(lista_original) == 0:
         return Exception
     elif type(numeros) != list or not all(isinstance(i,int)for i in numeros) or len(numeros) == 0:
         return Exception
     lista_resultado = []
     for i in numeros:
-        qtd = conta_itens_list(lista_numeros,i)
+        qtd = conta_itens_list(lista_original,i)
         lista_resultado.append(f'numero {i} sequência {qtd}')
 
     return lista_resultado
