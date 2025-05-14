@@ -16,8 +16,6 @@
 #     return lista_num
 
 
-# print(gera_lista(4))
-
 def del_numeros_rep(lista_num):
     if type(lista_num) != list or not all(isinstance(i,int)for i in lista_num) or len(lista_num) == 0:
         return Exception
