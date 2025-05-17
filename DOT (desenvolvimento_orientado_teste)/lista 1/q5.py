@@ -24,15 +24,21 @@ def main():
         try:
 
             sexo = int(input('Digite um número 1 para feminino ou 2 para masculino : '))
+            if sexo != 1 and sexo != 2:
+                print(f'Opção inválido : {sexo}')
+                continue
 
             altura = float(input('Digite sua altura (EX: 1.60) : '))
+            if altura <= 0:
+                print(f'Altura {altura} inválido')
+                continue
 
             resul_peso_ideal = peso_ideal(sexo,altura)
 
             print(f'Resultado do seu peso ideal é {resul_peso_ideal}')
             break
         except ValueError:
-            print('valor invalido')
+            print('valor inválido')
 if __name__ == '__main__':
     main()
 
