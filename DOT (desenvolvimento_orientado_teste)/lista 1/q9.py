@@ -5,10 +5,10 @@ def soma_intervalo(num1,num2):
     if type(num1) != int or type(num2) != int:
         return Exception
 
-    cont = 0
-    for qtd in range(num1,num2+1):
-        cont += qtd
-    return cont
+    soma = 0
+    for i in range(num1,num2+1):
+        soma += i
+    return soma
 
 def main():
 
@@ -16,9 +16,12 @@ def main():
         try:
             num1 = int(input('Digite número de inicio : '))
             num2 = int(input('Digite número de fim : '))
-            resultado = soma_intervalo(num1,num2)
-            print(f'soma do intervalo {num1} e {num2} é {resultado}')
-            break
+            if num1 < num2:
+                resultado = soma_intervalo(num1,num2)
+                print(f'soma do intervalo {num1} e {num2} é {resultado}')
+                break
+            else:
+                print(f'inicio tem que ser menor {num1} e fim tem que ser maior {num2}')
 
         except ValueError:
             print('\nValor invalidor')
