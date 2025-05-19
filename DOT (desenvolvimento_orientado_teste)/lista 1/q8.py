@@ -5,6 +5,8 @@
 #use esta função em um programa que fica lendo do usuário um número qualquer e imprime este número ao cubo na tela
 #O programa deve ficar lendo os números até o usuário responde N à pergunta se ele deseja continuar ou não.
 def opcao(caract):
+    if type(caract) != str:
+        return Exception
     # caract = input('Deseja continua aperta S ou N para encerrar : ').upper()
     if caract != 'S' and caract != 'N':
         return 'entrada inválida'
